@@ -5,7 +5,7 @@ import { BsExclamationTriangle } from "react-icons/bs";
 import { FaRegCalendarAlt, FaGraduationCap } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
 import "./UserDash.css";
-import { faTruckPickup } from "@fortawesome/free-solid-svg-icons";
+
 // Import necessary components
 import logo from "../../assets/logo.png";
 import { Link, Navigate, useNavigate } from "react-router-dom";
