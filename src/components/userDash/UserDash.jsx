@@ -173,7 +173,7 @@ const UserDash = () => {
 
            </div>
            {/* ------------------------------------------ */}
-           <div className="user-box">
+           <div className="user-box" style={{display:"grid",gap:"4px"}} >
              <h3>Up Coming Pick-ups </h3>
              <ul>
               <div className="upcoming-pickup">
