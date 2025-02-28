@@ -1,0 +1,93 @@
+.recent-reports{
+    display: flex;
+    justify-content: space-between;
+    background: #192821;
+    padding: 10px;
+    border-radius: 4px;
+    align-items: center;
+}
+.left-recent{
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+.left-recent-text{
+    display: grid;
+    gap:1px;
+    padding: 0;
+}
+.left-recent-icon{
+    background: #23AE60;
+    color:white;
+    padding: 5px;
+    font-size: 40px;
+    border-radius: 4px;
+}
+.recent-report-pending{
+   background: #FFF3CD;
+   color:#856404;
+   border-radius: 50px;
+   padding: 4px;
+   width: 150px;
+   text-align: center;
+}
+.recent-report-progress{
+    background:#D87676C7;
+    color:"#FFF3CD";
+    border-radius: 50px;
+   padding: 4px;
+   width: 150px;
+   text-align: center;
+}
+.location-text {
+    color:#797474;
+}
+   
+/* .................................................. */
+.upcoming-pickup{
+    display: flex;
+    justify-content: space-between;
+    background: #192821;
+    padding: 10px;
+    border-radius: 4px;
+    align-items: center;
+}
+.right-upcoming{
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+.right-upcoming-text{
+    display: grid;
+    gap:1px;
+    padding: 0;
+}
+.right-upcoming-icon{
+    background: #23AE60;
+    color:white;
+    padding: 5px;
+    font-size: 40px;
+    border-radius: 4px;
+}
+.upcoming-report-schedule{
+   background: #FFF3CD;
+   color:#856404;
+   border-radius: 50px;
+   padding: 4px;
+   width: 150px;
+   text-align: center;
+}
+.recent-report-progress{
+    background:#D87676C7;
+    color:"#FFF3CD";
+    border-radius: 50px;
+   padding: 4px;
+   width: 150px;
+   text-align: center;
+}
+.time-text {
+    color:#797474;
+}
+   
