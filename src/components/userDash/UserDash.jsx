@@ -198,7 +198,7 @@ const UserDash = () => {
                   </div>
                   
                 </div>
-                <p className="upcoming-report-schedule">not scheduled</p>
+                <p className="upcoming-report-not-scheduled">not scheduled</p>
               </div>
              </ul>
            </div>

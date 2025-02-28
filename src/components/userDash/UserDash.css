@@ -90,4 +90,11 @@
 .time-text {
     color:#797474;
 }
-   
+   .upcoming-report-not-scheduled{
+    background:#D87676C7;
+    color:white;
+    border-radius: 50px;
+    padding: 4px;
+    width: 150px;
+    text-align: center;
+   }
