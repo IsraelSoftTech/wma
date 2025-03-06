@@ -161,7 +161,7 @@ useEffect(() => {
             <div className="profile-container">
             <div className="text-profile" style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "8px" }}>
       <FaUserAlt className="profile-icon" onClick={toggleProfileDropdown} />
-      <p style={{ textAlign: "center", fontSize: "14px", color: "#23AE60" }}>{username}</p>
+      <p style={{ textAlign: "center", fontSize: "14px", color: "#FE7235" }}>{username}</p>
     </div>
               {isProfileDropdownOpen && (
                 <div className="profile-dropdown">

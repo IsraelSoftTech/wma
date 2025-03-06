@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { FaRegFileAlt, FaUserAlt, FaBell, FaTrash, FaCheckCircle, FaTimesCircle, FaTruckPickup } from "react-icons/fa";
+import { FaRegFileAlt, FaUserAlt, FaBell,  FaCheckCircle, FaTimesCircle, FaTruckPickup, FaSpinner, FaPaperPlane } from "react-icons/fa";
 import { MdMenu, MdSearch} from "react-icons/md";
 import ws1 from "../../assets/ws1.jpeg"
 import ws2 from "../../assets/ws2.jpg"
 import { FaRegCalendarAlt, FaGraduationCap } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
-import "./UserDash.css";
+import "./UserReport.css";
 
 // Import necessary components
 import logo from "../../assets/logo.png";
@@ -13,7 +13,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const firebaseUrl = "https://register-d6145-default-rtdb.firebaseio.com/users.json";
 
-const UserDash = () => {
+const UserReport = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
 
@@ -92,12 +92,12 @@ const UserDash = () => {
         </div>
         <ul className={`nav-links ${isSidebarOpen ? "active" : ""}`}>
           <li>
-            <Link to="/user-dashboard" className="active link">
+            <Link to="/user-dashboard" className="link">
               <MdDashboard className="icon1" /> Dashboard
             </Link>
           </li>
           <li>
-            <Link to="/user-report" className="link">
+            <Link to="/user-report" className="active link">
               <FaRegFileAlt className="icon1" /> Report
             </Link>
           </li>
@@ -156,73 +156,62 @@ const UserDash = () => {
 
         {/* Reports of submission */}
         <section className="user-illegal">
-          <div className="user-box" style={{ display: "grid", gap: "4px" }}>
-            <h3>Recent Reports</h3>
-            <ul>
-              <div className="recent-reports">
-                <div className="left-recent">
-                  <FaTrash className="left-recent-icon" />
-                  <div className="left-recent-text">
-                    <p>Pastic Waste</p>
-                    <p className="location-text">Mile 4</p>
-                  </div>
-                </div>
-                <p className="recent-report-pending">pending</p>
-              </div>
-            </ul>
+          <div className="user-box">
+         <h3>Report a waste</h3>
 
-            <ul>
-              <div className="recent-reports">
-                <div className="left-recent">
-                  <FaTrash className="left-recent-icon" />
-                  <div className="left-recent-text">
-                    <p>Electronic Waste</p>
-                    <p className="location-text">City Chemist</p>
-                  </div>
-                </div>
-                <p className="recent-report-progress">in progress</p>
-              </div>
-            </ul>
-            <ul>
-              <div className="recent-reports">
-                <div className="left-recent">
-                  <FaTrash className="left-recent-icon" />
-                  <div className="left-recent-text">
-                    <p>Pastic Waste</p>
-                    <p className="location-text">Mile 4</p>
-                  </div>
-                </div>
-                <p className="recent-report-pending">pending</p>
-              </div>
-            </ul>
+         <form className="report-waste-form">
+<label for="type"><h4>Type of Waste:</h4></label>
+<select>
+    <option>Plastic</option>
+    <option>organic</option>
+    <option>metallic</option>
+    <option>glass</option>
+    <option>paper</option>
+    <option>electronic</option>
+    <option>hazardous</option>
+    <option>textile</option>
+</select>
+
+
+<label for="description"><h4>Description:</h4></label>
+<textarea id="description" placeholder="Describe the waste issue..." required></textarea>
+
+<label for="image"><h4>Upload Image:</h4></label>
+<input type="file" id="image" accept="image/*" required/>
+<label for="location"><h4>Pick Location:</h4></label>
+            <input type="text" id="location" placeholder="Click to select location"  readonly/>
+
+            <button type="submit">Submit Report</button>
+         </form>
+        
+
           </div>
           {/* ------------------------------------------ */}
-          <div className="user-box" style={{ display: "grid", gap: "4px" }}>
-            <h3>Up Coming Pick-ups </h3>
-            <ul>
-              <div className="upcoming-pickup">
-                <div className="right-upcoming">
-                  <FaTruckPickup className="right-upcoming-icon" />
-                  <div className="right-upcoming-text">
-                    <p>General Wastes</p>
-                    <p className="time-text">12/09/2025</p>
-                  </div>
-                </div>
-                <p className="upcoming-report-schedule">scheduled</p>
-              </div>
-            </ul>
-            <ul>
-              <div className="upcoming-pickup">
-                <div className="right-upcoming">
-                  <FaTruckPickup className="right-upcoming-icon" />
-                  <div className="right-upcoming-text">
-                    <p>Recyclable wastes</p>
-                    <p className="time-text">13/09/2025</p>
-                  </div>
-                </div>
-                <p className="upcoming-report-not-scheduled">not scheduled</p>
-              </div>
-            </ul>
+
+          <div className="user-box">
+           
+        
+        <h3>Report Status</h3>
+        <div className="status-steps">
+          <div className="step completed">
+
+            <FaPaperPlane className="status-tract"/>
+            <span className="step-number">11</span>
+            <p>Submitted</p>
+          </div>
+          <div className="step in-progress">
+            <FaSpinner className="status-tract"/>
+            <span className="step-number">3</span>
+            <p>In Progress</p>
+          </div>
+          <div className="step pending">
+            <FaCheckCircle className="status-tract"/>
+            <span className="step-number">7</span>
+            <p>Resolved</p>
+          </div>
+        </div>
+    
+            
           </div>
 {/* -------------------------------------------------------------------- */}
 <div className="user-box-img">
@@ -309,4 +298,4 @@ const UserDash = () => {
   );
 };
 
-export default UserDash;
+export default UserReport;

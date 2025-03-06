@@ -8,6 +8,7 @@ import AdminDash from "./components/dashBoard/AdminDash";
 import Schedule from "./components/Schedule/Schedule";
 import Educare from "./components/Educare/Educare";
 import AdminReport from "./components/AdminReport/AdminReport";
+import UserReport from "./components/userReport/UserReport";
 
 function App() {
   const firebaseUrl = "https://register-d6145-default-rtdb.firebaseio.com/users.json";
@@ -67,6 +68,7 @@ function App() {
         <Route path="/report" element={<AdminReport />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/education" element={<Educare />} />
+        <Route path="/user-report" element={<UserReport/>} />
       </Routes>
     </Router>
   );
