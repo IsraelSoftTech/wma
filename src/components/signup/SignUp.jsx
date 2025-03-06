@@ -75,27 +75,27 @@ const SignUp = () => {
           <FcGoogle style={{ fontSize: "35px" }} />
           Continue with Google Authenticate
         </button>
-        <p className="or-text">Or</p>
+        <p className="or-text" style={{color:"#FE7235"}}>Or</p>
 
         {message && <p className="message">{message}</p>}
 
         <form onSubmit={handleSignUp}>
           <label>*Username</label>
-          <input type="text" name="username" placeholder="Enter Username" onChange={handleChange} required />
+          <input className="int"  type="text" name="username" placeholder="Enter Username" onChange={handleChange} required />
 
           <label>*Email</label>
-          <input type="email" name="email" placeholder="Enter Email" onChange={handleChange} required />
+          <input className="int"  type="email" name="email" placeholder="Enter Email" onChange={handleChange} required />
 
           <label>*Password</label>
-          <input type="password" name="password" placeholder="Enter Password" onChange={handleChange} required />
+          <input className="int"  type="password" name="password" placeholder="Enter Password" onChange={handleChange} required />
 
           <label>*Confirm Password</label>
-          <input type="password" name="confirm_password" placeholder="Repeat Password" onChange={handleChange} required />
+          <input className="int"  type="password" name="confirm_password" placeholder="Repeat Password" onChange={handleChange} required />
 
           <button className="signup-btn" disabled={loading}>Sign Up</button>
         </form>
 
-        <p>Already have an account? <Link to="/" style={{color:"#4CAF50"}}>Sign In</Link></p>
+        <p>Already have an account? <Link to="/" style={{color:"#408AFD",textDecoration:"none"}}>Sign In</Link></p>
       </div>
     </div>
   );

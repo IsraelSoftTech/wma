@@ -79,11 +79,11 @@ const SignIn = () => {
 
         <form onSubmit={handleSignIn}>
           <label>*Username</label>
-          <input type="text" name="username" placeholder="Enter username" onChange={handleChange} required />
+          <input className="int" type="text" name="username" placeholder="Enter username" onChange={handleChange} required />
 
           <label>*Password</label>
           <div className="password-wrapper">
-            <input type={showPassword ? "text" : "password"} name="password" placeholder="Enter Password" onChange={handleChange} required />
+            <input className="int"  type={showPassword ? "text" : "password"} name="password" placeholder="Enter Password" onChange={handleChange} required />
             <span className="eye-icon" onClick={togglePasswordVisibility}>
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </span>
@@ -93,7 +93,7 @@ const SignIn = () => {
         </form>
 
         <p className="forgot-password">Forgot Password?</p>
-        <p>Don’t have an account? <Link to="/signup" style={{color:"#4CAF50"}}>Sign Up</Link></p>
+        <p>Don’t have an account? <Link to="/signup" style={{color:"#408AFD",textDecoration:"none"}}>Sign Up</Link></p>
       </div>
     </div>
   );

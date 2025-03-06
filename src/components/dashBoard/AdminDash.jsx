@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { FaRegFileAlt, FaUserAlt, FaBell } from "react-icons/fa";
-import { MdDelete, MdEdit, MdMenu, MdSearch } from "react-icons/md";
-import { AiOutlinePlusCircle } from 'react-icons/ai';
+import { FaRegFileAlt, FaUserAlt, FaBell, FaTruckPickup } from "react-icons/fa";
+import {  MdMenu, MdSearch } from "react-icons/md";
+import {  } from 'react-icons/ai';
 
-import { FiTrash2, FiEdit, FiUsers } from "react-icons/fi";
+import {  FiUsers } from "react-icons/fi";
 import { FaRegCalendarAlt, FaGraduationCap } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
 import "./AdminDash.css";
 import logo from "../../assets/logo.png";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-// Graph
-import { Line } from "react-chartjs-2";
+import { Link,  useNavigate } from "react-router-dom";
+
+
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Tooltip } from "chart.js";
 import EduContent from "../EduContent/EduContent";
 import Users from "../users/Users";
-import { FcGraduationCap } from "react-icons/fc";
+
 //import users
 import { getDatabase, ref, onValue } from "firebase/database";
 import firebaseApp from "../../firebaseConfig"; 
+import CustomAreaChart from "../recharts/CustomAreaChart";
 // Register necessary Chart.js components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip);
 //abreviate username text
@@ -83,29 +84,7 @@ const AdminDash = () => {
   const closeEditProfile = () => {
     setIsEditProfileOpen(false);
   };
-// graph
-const data = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "May"],
-  datasets: [
-    {
-      label: "Reports Analysis",
-      data: [10, 25, 15, 30, 40], // Adjust these values to match the image trend
-      backgroundColor: "#23AE60",
-      color:"#fff",
-      borderColor: "#fff",
-      fill: true,
-      tension: 0.4, // Curve effect
-    },
-  ],
-};
 
-const options = {
-  responsive: true,
-  maintainAspectRatio: false,
-  scales: {
-    y: { beginAtZero: true },
-  },
-};
 // username display
 const [username, setUsername] = useState("Loading...");
 
@@ -140,22 +119,22 @@ useEffect(() => {
         <ul className={`nav-links ${isSidebarOpen ? "active" : ""}`}>
   <li>
     <Link to="/admin-dashboard" className="active link">
-      <MdDashboard className="icon" /> Dashboard
+      <MdDashboard className="icon1" /> Dashboard
     </Link>
   </li>
   <li>
     <Link to="/report" className="link">
-      <FaRegFileAlt className="icon" /> Report
+      <FaRegFileAlt className="icon1" /> Report
     </Link>
   </li>
   <li>
     <Link to="/schedule" className="link">
-      <FaRegCalendarAlt className="icon" /> Schedule
+      <FaRegCalendarAlt className="icon1" /> Schedule
     </Link>
   </li>
   <li>
     <Link to="/education" className="link">
-      <FaGraduationCap  className="icon" /> Education
+      <FaGraduationCap  className="icon1" /> Education
     </Link>
   </li>
  
@@ -177,8 +156,8 @@ useEffect(() => {
             <input type="text" placeholder="Place a search" />
           </div>
           <div className="top-icons">
-            <FaBell className="icon bell" />
-            <div className="notification-badge"></div>
+            <FaBell className="icon1 bell" />
+            <div className="notification-badge">1</div>
             <div className="profile-container">
             <div className="text-profile" style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "8px" }}>
       <FaUserAlt className="profile-icon" onClick={toggleProfileDropdown} />
@@ -211,17 +190,17 @@ useEffect(() => {
 
 <section className="stats-section">
       <div className="stat-card">
-        <FaRegFileAlt className="icon" />
+        <FaRegFileAlt className="icon2" />
         <h3>Reports</h3>
         <p>21</p>
       </div>
       <div className="stat-card">
-        <FaRegFileAlt className="icon" />
+        <FaTruckPickup className="icon2" />
         <h3>Pending PickUps</h3>
         <p>12</p>
       </div>
       <div className="stat-card">
-        <FiUsers className="icon" />
+        <FiUsers className="icon2" />
         <h3>Users</h3>
         <p>{userCount}</p> {/* Dynamically updates the user count */}
       </div>
@@ -231,9 +210,9 @@ useEffect(() => {
         <section className="content-section">
          <EduContent/>
  <div className="graph-box">
-      <h3>Reports Analysis </h3>
+   
       <div className="graph-placeholder">
-        <Line data={data} options={options} />
+      <CustomAreaChart/>
       </div>
     </div>
         </section>
@@ -257,3 +236,4 @@ useEffect(() => {
 };
 
 export default AdminDash;
+

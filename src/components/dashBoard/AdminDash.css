@@ -5,6 +5,8 @@
    
 
   }
+
+  
   
   .dashboard-container {
     display: flex;
@@ -13,10 +15,10 @@
   
   .sidebar {
     width: 250px;
-    background: #181818;
-    color: white;
+    background: #FFFFFF;
+    color: black;
     padding: 20px;
-    border: 1px solid #3b3b3b;
+ 
     height: 100vh; /* Full height of viewport */
       overflow-y: auto; /* Enable scrolling if content is too long */
   }
@@ -26,15 +28,16 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(197, 195, 195);
     width: 100%;
   }
   .logo img {
 width: 80px;
+
   }
   
 .topbar h2{
-    color: #fff;
+    color: black;
     text-align: center;
     align-items: center;
     font-size: 22px;
@@ -51,13 +54,11 @@ width: 80px;
     display: flex;
     align-items: center;
     gap: 10px;
+    color: black;
   }
-  .nav-links li:hover{
-    background: #181818;
-  }
-
+  
   .nav-links .active {
-    background: #23AE60;
+    background: #FE7235;
     color: #fff;
     border-radius: 4px;
     padding: 10px;
@@ -65,14 +66,11 @@ width: 80px;
     display: flex;
     justify-content: left;
   }
-  .nav-links .active:hover{
-    color: #23AE60;
-    background: #fff;
-  }
+
   
   .main-content {
     flex: 1;
-    background: #192821;
+    background: #F7F7F7;
     padding: 20px;
   }
 
@@ -80,41 +78,47 @@ width: 80px;
     display: flex; /* Use flex instead of grid */
     align-items: center;
     justify-content: space-between;
-    background: #101010;
+    background: #FFFFFF;
     top: 0;
-    border: 1px solid #3b3b3b;
+
   
     width: 82vw; /* Ensure it spans the full width */
     padding: 10px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Evenly spread soft shadow */
     position: fixed;
     z-index: 1000; /* Ensure it stays above other elements */
   }
-  .icon{
+  .icon1{
     font-size: 30px;
   }
+  .icon2{
+    background: #e2e4e3;
+    color:rgb(77, 76, 76);
+    padding: 7px;
+    font-size: 40px;
+    border-radius: 50%;
+  }
   .bell{
-    color:#fff;
+    color:black;
   }
   
   .search-box {
     display: flex;
     align-items: center;
-
-    border: 1px solid #3b3b3b;
     padding: 5px;
     gap: 4px;
     border-radius: 5px;
+    border: 1px solid rgb(197, 195, 195);
   }
   .search-icon{
     font-size: 26px;
-    color: #fff;
+    color: black;
   }
   .search-box input {
     border: none;
-    
     outline: none;
     padding: 5px;
+    background: none;
   }
   
   .top-icons {
@@ -127,26 +131,26 @@ width: 80px;
   }
   
   .stat-card {
-    background: #101010;
-    color: white;
+    background: #FFFFFF;
+    color: black;
     padding: 15px;
     border-radius: 4px;
     flex: 1;
     text-align: center;
-    border: 1px solid #3b3b3b;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Evenly spread soft shadow */
 
   
   }
   .stat-card p{
     text-align: center;
-    color: #23AE60;
+    color: black;
   }
   .stat-card h3{
     text-align: center;
-    color: #fff;
+    color: black;
   }
   .notification-badge{
-    background: red;
+    background: #FE7235;
     padding: 10px;
     margin-left: -25px;
     margin-top: -20px;
@@ -168,23 +172,26 @@ width: 80px;
   }
   .content-section {
     display: flex;
+    background: #FFFFFF;
     gap: 20px;
+
   }
   .profile-icon {
-    color:#fff;
+    color:black;
     font-size: 25px;
     cursor: pointer;
   }
   
   .content-box, .graph-box {
+
     background: white;
     padding: 30px;
     border-radius: 10px;
     flex: 1;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Evenly spread soft shadow */
     overflow-y: auto;
     height: 200px;
-    border: 1px solid #3b3b3b;
+
    
   }
   .user-illegal{
@@ -199,24 +206,24 @@ width: 80px;
     width: 100%;
   }
   tr,td,th{
-    border-bottom: 1px solid rgb(37, 37, 37);
+  border-bottom: 1px solid rgb(218, 214, 214);
     text-align: center;
   }
   .user-box{
-    background: #101010;
-    color: #fff;
+    background: #FFFFFF;
+    color: black;
     padding: 30px;
     border-radius: 10px;
     flex: 1;
     overflow-y: auto;
     height: 250px;
-    border: 1px solid #3b3b3b;
+  
   }
   .user-box h3{
-    color: #23AE60;
+    color: black;
   }
   .link{
-    color: #fff;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,25 +233,22 @@ width: 80px;
   .content-box li{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid rgb(48, 47, 47);
+
    }
-.content-box{
-  border: 1px solid #3b3b3b;
-}
-  
+
   
   .delete-icon {
     cursor: pointer;
     margin-left: 10px;
     width: 24px;
     height: 24px;
-    color: rgb(7, 7, 7);
-    background: #fff;
+    color: red;
+    background: #ecebeb;
     padding: 5px;
     border-radius: 50%;
   }
   .edit-icon{
-    color:#23AE60;
+    color:#FE7235;
     width: 18px;
     height: 18px;
     cursor: pointer;
@@ -328,10 +332,10 @@ margin-left: 220px;
 
 }
 .profile-icon{
-  font-size: 17px;
+  font-size: 20px;
 }
 .bell{
-  font-size: 17px;
+  font-size: 30px;
 }
 .notification-badge{
 font-size: 1px;
@@ -369,6 +373,7 @@ top: 5px;
 @media (max-width: 768px) {
   .menu-icon {
     display: block; /* Show on small screens */
+    color: black;
   }
 
   .search-icon {
@@ -402,7 +407,7 @@ top: 5px;
   .menu-icon {
     font-size: 24px;
     cursor: pointer;
-    color: #fff;
+    color: black;
     position: absolute;
     left: 30px;
   }
@@ -445,7 +450,7 @@ top: 5px;
   top: 40px;
   background: #fff;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Evenly spread soft shadow */
   border-radius: 5px;
   overflow: hidden;
   z-index: 1000;
@@ -510,12 +515,12 @@ top: 5px;
 .graph-box {
   width: 100%;
   padding: 20px;
-  background: #101010;
+  background: #FFFFFF;
 
   height: 250px;
 
   border-radius: 10px;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Evenly spread soft shadow */
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
@@ -523,7 +528,7 @@ top: 5px;
 .graph-box h3 {
   font-size: 18px;
   font-weight: bold;
-  color: #23AE60;
+  color: black;
   margin-bottom: 10px;
 }
 

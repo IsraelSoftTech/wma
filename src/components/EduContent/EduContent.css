@@ -3,8 +3,8 @@
     width: 90%;
     margin: auto;
     padding: 20px;
-    background: #101010;
-    color: #fff;
+    background: #ffffff;
+    color: black;
     border-radius: 10px;
     height: 250px;
   }
@@ -15,11 +15,11 @@
     align-items: center;
   }
   .edu h3{
-    color: #23AE60;
+    color: black;
   }
   .add-icon {
     cursor: pointer;
-    color: #23AE60;
+    color: #408AFD;
     font-size: 40px;
   }
   
@@ -47,6 +47,7 @@
   .delete-icon {
     cursor: pointer;
     font-size: 20px;
+  
   }
   
   .modal {
